@@ -1,0 +1,52 @@
+// ブレイクポイント
+$BREAKPOINT_SP: 768px;
+$BREAKPOINT_TB: 960px;
+$BREAKPOINT_PC: 1024px;
+
+// 一般
+.master,
+:root {
+--color-set1: rgba(0, 54, 181, 1);// #0036b5
+--color-set1-bg: rgba(248, 249, 250, 1);// #f8f9fa
+--color-set1-weak: rgba(0, 215, 255, 1);// #00d7ff
+--color-set1-accent: rgba(0, 39, 130, 1);// #002782
+
+--color-set2: rgba(221, 58, 53, 1);// #dd3a35
+--color-set3: rgba(198, 175, 66, 1);// #C6AF42
+--color-set4: rgba(27, 182, 163, 1);// #1BB6A3
+--color-set5: rgba(242, 173, 166, 1);// #f2ada6
+--color-set6: rgba(150, 122, 179, 1);// #967ab3
+
+--color-gray1: rgba(242, 242, 242, 1);// #f2f2f2
+
+
+
+--space-inline: 10px;
+--space-block: 20px;
+}
+
+// 変遷
+$TRANSITON_OVER: all 0.3s ease;
+$TRANSITON_SLIDE: all 0.5s ease;
+$TRANSITON_RADIO: all 1s ease;
+$TRANSITON_MODAL: all 0.3s linear;
+
+// 変遷タイム
+$transition-time-hover: 0.7s;
+
+// 角
+$border-radius-inline: 3px;
+$border-radius-block: 8px;
+$border-radius-circle: 9999px;
+
+// 空き	
+$space-min: 5px;
+$space-inline: 10px;
+$space-block: 20px;
+$space-section: 30px;
+
+// チェックボックス
+$unchecked-color: #ccc;
+$checkbox-large: 50px;
+$checkbox-middle: 25px;
+$duration: .4s;

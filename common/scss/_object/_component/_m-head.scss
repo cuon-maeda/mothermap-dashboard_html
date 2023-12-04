@@ -1,0 +1,43 @@
+@mixin m-head() {
+position: fixed;
+left: 0;
+top: 0;
+background-color: var(--color-accent2);
+border-radius: 5px;
+margin-bottom: 20px;
+padding: 10px 20px 10px 50px;
+font-size: 20px;
+font-weight: bold;
+line-height: 1.5;
+	&::before {
+	box-sizing: border-box;
+	transform: translateY(-50%);
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	display: block;
+	font-family: 'icf' !important;
+	font-size: 34px;
+	text-align: center;
+	font-weight: normal;
+	color: var(--color-primary);
+	}
+	&::after {
+	position: absolute;
+	content: '';
+	top: 100%;
+	left: 30px;
+	border: 15px solid transparent;
+	border-top: 15px solid var(--color-accent2);
+	width: 0;
+	height: 0;
+	}
+	@include bp(sp) {
+	padding: 10px 20px 10px 43px;
+	font-size: 14px;
+		&::before {
+		left: 10px;
+		font-size: 28px;
+		}
+	}
+}

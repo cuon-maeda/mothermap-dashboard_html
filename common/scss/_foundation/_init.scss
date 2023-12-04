@@ -1,0 +1,88 @@
+section:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+section {
+zoom: 1;
+}
+
+html {
+height: 100%;
+}
+body {
+position: relative;
+background-color: var(--color-set1-bg);
+font-family: 'Noto Sans JP', sans-serif;
+font-weight: 400;
+margin: 0;
+padding: 0;
+font-size: 12px;
+line-height: 1.5;
+letter-spacing: 0.1em;
+color: #000;
+-webkit-font-smoothing: antialiased;
+font-feature-settings: "palt";
+-webkit-font-feature-settings: "palt";
+}
+input,select,button {
+font-family: 'Noto Sans JP', sans-serif;
+}
+a,
+a img {
+transition: $TRANSITON_OVER;
+}
+a:link {
+color: #000;
+text-decoration: none;
+}
+a:active,
+a:visited { 
+color: #000;
+text-decoration: none;
+}
+a:hover { 
+color: #000;
+text-decoration: none;
+}
+@include bp(tb) {
+	a[href*="tel:"] {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	}
+}
+strong {
+font-weight: normal;
+}
+
+.viewport {
+overflow: hidden;
+overflow-x: auto;
+max-width: 100%;
+}
+.column2 {
+display: flex;
+flex-wrap: wrap;
+gap: $space-section;
+	.main {
+	flex: 1;
+	}
+	.sub {
+	width: 400px;
+	}
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+::-webkit-scrollbar-track {
+background-color: var(--color-set1-weak);
+}
+::-webkit-scrollbar-thumb {
+background-color: var(--color-set1);
+
+}

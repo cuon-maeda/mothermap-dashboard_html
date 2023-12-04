@@ -1,0 +1,102 @@
+.balanceSCT {
+margin-bottom: $space-section;
+	@include section-type1;
+	.list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $space-block;
+	}
+	.block {
+	flex: 1;
+	padding: $space-block;
+	text-align: center;
+		&.preCon {
+		border: solid 3px var(--color-set3);
+		}
+		&.conStart {
+		border: solid 3px var(--color-set4);
+		}
+		&.conComplete {
+		border: solid 3px var(--color-set6);
+		}
+		&.workRemain {
+		border: solid 3px var(--color-set2);
+		}
+		h3 {
+		margin-bottom: $space-inline;
+		font-weight: 700;
+		font-size: 16px;
+		}
+		.count {
+		background-color: var(--color-gray1);
+		margin-bottom: $space-inline;
+		padding: $space-inline;
+		}
+		span {
+		font-weight: 700;
+		font-size: 18px;
+		}
+		.month {
+			&::before {
+			margin-right: $space-min;
+			content: "前月比";
+			}
+		}
+		.year {
+			&::before {
+			margin-right: $space-min;
+			content: "前年比";
+			}
+		}
+		.plus {
+		color: var(--color-set1);
+			&::after {
+			margin-left: $space-min;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f0d8";
+			font-size: 18px;
+			}
+		}
+		.minus {
+		color: var(--color-set2);
+			&::after {
+			margin-left: $space-min;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f0d7";
+			font-size: 18px;
+			}
+		}
+	}
+	.more {
+	margin-top: $space-block;
+	text-align: right;
+		a {
+		position: relative;
+		display: block;
+		background-color: #fff;
+		box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+		border-radius: $border-radius-inline;
+		padding: $space-inline 25px $space-inline $space-inline;
+			&:hover {
+			background-color: var(--color-set1-weak);
+			}
+			&::before {
+			transition: $TRANSITON_OVER;
+			transform: translate(0%, -50%);
+			position: absolute;
+			right: 1em;
+			top: 50%;
+			content: '\f054';
+			font-weight: 900;
+			font-family: "Font Awesome 5 Free";
+			font-size: 10px;
+			color: var(--color-sub1);
+			}
+			&:hover::before {
+			right: 0.5em;
+			}
+		}
+	}
+}

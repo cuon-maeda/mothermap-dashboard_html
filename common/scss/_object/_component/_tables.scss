@@ -1,0 +1,122 @@
+.tableSet1 {
+border-collapse: collapse;
+width: 100%;
+	tbody tr.over {
+		td {
+		background-color: var(--color-set5);
+		}
+	}
+	tbody tr:hover {
+		td {
+		background-color: var(--color-set1-weak);
+		cursor: pointer;
+		}
+	}
+	th {
+	border-bottom: solid 3px var(--color-set1);
+	background-color: #fff;
+	font-size: 16px;
+	padding: $space-inline;
+	vertical-align: middle;
+	text-align: left;
+	}
+	thead th {
+	padding: 0 $space-inline $space-inline $space-inline;
+	}
+	td {
+	transition: background-color $transition-time-hover ease;
+	border-bottom: solid 1px #ddd;
+	background-color: #fff;
+	font-size: 16px;
+	padding: $space-inline;
+	vertical-align: middle;
+		&.process {
+		width: 0;
+		}
+		&.img {
+		padding: 0 $space-inline;
+		vertical-align: middle;
+			img {
+			display: block;
+			object-fit: cover;
+			width: 50px !important;
+			height: 50px !important;
+			}
+		}
+		strong {
+		font-weight: 700;
+		}
+		span.over {
+		font-weight: 700;
+		color: var(--color-set2);
+		}
+		a {
+		text-decoration: underline;
+	    text-underline-offset: 2px;
+		}
+		a:hover {
+		text-decoration: none;
+		}
+	}
+	tr:nth-of-type(odd) td {
+	background-color: var(--color-gray1);
+	}
+	.info {
+	font-size: 10px;
+	}
+	.bar {
+	display: flex;
+	list-style: none;
+		li {
+		position: relative;
+		font-weight: 700;
+		font-size: 16px;
+		height: 10px;
+		text-align: center;
+			&::before {
+			content: attr(data-name);
+			transform: translateX(-50%);
+			display: none;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			background-color: var(--color-set1);
+			border-radius: $border-radius-inline;
+			margin-bottom: 5px;
+			padding: 3px 5px;
+			pointer-events: none;
+			white-space: nowrap;
+			font-weight: 400;
+			font-size: 10px;
+			color: #fff;
+			text-align: center;
+			z-index: 1;
+			}
+			&::after {
+			content: "";
+			display: none;
+			position: absolute;
+			border-style: solid;
+			border-width: 5px 5px 0;
+			border-color: var(--color-set1) transparent transparent transparent;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 0;
+			}
+			&:hover::before,
+			&:hover::after {
+			display: block;
+			}
+		}
+		.notYet {
+		background-color: var(--color-set3);
+		}
+		.error {
+		background-color: var(--color-set2);
+		}
+		.done {
+		background-color: var(--color-set6);
+		}
+	}
+}

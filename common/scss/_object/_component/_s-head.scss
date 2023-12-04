@@ -1,0 +1,38 @@
+@mixin s-head() {
+padding-left: 35px;
+font-size: 14px;
+font-weight: bold;
+	&::before {
+	box-sizing: border-box;
+	transform: translateY(-50%);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-family: 'icf' !important;
+	font-size: 20px;
+	text-align: center;
+	font-weight: normal;
+	color: var(--color-primary);
+	}
+	strong {
+	background: linear-gradient(transparent 70%, var(--color-marker) 70%);
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--color-primary);
+	}
+	@include bp(sp) {
+	padding-left: 30px;
+	font-size: 12px;
+		&::before {
+		width: 25px;
+		height: 25px;
+		font-size: 20px;
+		}
+		strong {
+		font-size: 20px;
+		}
+	}
+}

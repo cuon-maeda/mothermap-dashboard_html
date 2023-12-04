@@ -1,0 +1,10 @@
+#pageBottom {
+position: absolute;
+right: $space-block;
+bottom: 20px;
+font-size: 12px;
+}
+
+body.plan #pageBottom {
+bottom: 80px;
+}

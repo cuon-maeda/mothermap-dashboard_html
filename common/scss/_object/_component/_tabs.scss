@@ -1,0 +1,113 @@
+.Tabs1 {
+display: flex;
+list-style: none;
+border-bottom: solid 1px var(--color-set1);
+	li {
+	margin-right: $space-inline;
+	font-size: 14px;
+	}
+	li a {
+	position: relative;
+	display: block;
+	padding: .4em .8em .4em 2.5em;
+	border-radius: $border-radius-block $border-radius-block 0 0;
+	text-decoration: none;
+		&.active {
+		background-color: var(--color-set1);
+			svg {
+			color: #fff;
+			}
+		}
+		svg {
+		transform: translate(0%, -50%);
+		position: absolute;
+		left: 1em;
+		top: 50%;
+		color: var(--color-set1-accent);
+		}
+		&:hover {
+		background-color: var(--color-set2);
+		color: #000;
+			svg {
+			color: #fff;
+			}
+		}
+	}
+}
+.Tabs2 {
+display: flex;
+list-style: none;
+	li {
+	margin-right: $space-inline;
+	font-size: 14px;
+	}
+	li a {
+	position: relative;
+	display: block;
+	padding: .4em .8em .4em .8em;
+	border-radius: $border-radius-inline;
+		&::before {
+		transform: translate(-50%,0);
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -0.5em;
+		border-left: 0.5em solid transparent;
+		border-right: 0.5em solid transparent;
+		}
+	}
+	li:nth-of-type(1) a {
+	background-color: #ea4335;
+		&.active::before {
+		border-top: 0.5em solid #ea4335;
+		}
+	}
+	li:nth-of-type(2) a {
+	background-color: #4285f4;
+		&.active::before {
+		border-top: 0.5em solid #4285f4;
+		}
+	}
+	li:nth-of-type(3) a {
+	background-color: #fbbc04;
+		&.active::before {
+		border-top: 0.5em solid #fbbc04;
+		}
+	}
+	li:nth-of-type(4) a {
+	background-color: #34A853;
+		&.active::before {
+		border-top: 0.5em solid #34A853;
+		}
+	}
+	li:nth-of-type(5) a {
+	background-color: #B3A35A;
+		&.active::before {
+		border-top: 0.5em solid #B3A35A;
+		}
+	}
+	li:nth-of-type(6) a {
+	background-color: #F1E14D;
+		&.active::before {
+		border-top: 0.5em solid #F1E14D;
+		}
+	}
+	li:nth-of-type(7) a {
+	background-color: #9CE8DB;
+		&.active::before {
+		border-top: 0.5em solid #9CE8DB;
+		}
+	}
+	li:nth-of-type(8) a {
+	background-color: #EABD91;
+		&.active::before {
+		border-top: 0.5em solid #EABD91;
+		}
+	}
+	li:nth-of-type(9) a {
+	background-color: #846C96;
+		&.active::before {
+		border-top: 0.5em solid #846C96;
+		}
+	}
+}

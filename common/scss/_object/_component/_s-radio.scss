@@ -1,0 +1,95 @@
+@mixin s-radio() {
+	input[type="radio"] {
+	display: none;
+	}
+	input[type="radio"] + label {
+	position: relative;
+	display: inline-block;
+	padding: 0 0 0 $checkbox-middle + 5;
+	font-size: 16px;
+	line-height: 1.8;
+	cursor: pointer;
+		&:hover {
+			&::before {
+			background-color: var(--color-accent_over);
+			}
+		}
+		&::before {
+		transform: translateY(-50%);
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		height: $checkbox-middle;
+		width: $checkbox-middle;
+		background-color: #fff;
+		border: solid 2px $unchecked-color;
+		border-radius: $checkbox-middle / 2;
+		display: inline-block;
+		box-sizing: border-box;
+		transition: $TRANSITON_OVER;
+		}
+		span {
+			&::before, &::after {
+			box-sizing: border-box;
+			position: absolute;
+			height: 0;
+			width: $checkbox-middle * .2;
+			background-color: var(--color-primary);
+			display: inline-block;
+			transform-origin: left top;
+			border-radius: 5px;
+			content: '';
+			}
+			&::before {
+			top: $checkbox-middle * .15;
+			left: -2px;
+			transform: translateX(15px) translateY(18px) rotate(-135deg);
+			}
+			&::after {
+			top: $checkbox-middle * .50;
+			left: -12px;
+			transform: translateX(15px) translateY(0%) rotate(-45deg);
+			}
+		}
+	}
+	input[type="radio"]:checked + label {
+		&::before {
+		background-color: var(--color-accent_over);
+		border-color:var(--color-primary);
+		}
+		span {
+			&::after {
+			height: $checkbox-middle * .5;
+			animation: dothabottomcheck-m $duration/2 ease 0s forwards;
+			}
+			&::before {
+			height: $checkbox-middle * 1.2;
+			animation: dothatopcheck-m $duration ease 0s forwards;
+			}
+		}
+	}
+	.error {
+		input[type="radio"] + label {
+			&:hover {
+				&::before {
+				background-color: var(--color-primary_over);
+				}
+			}
+		}
+		input[type="radio"]:checked + label {
+			&::before {
+			background-color: var(--color-primary_over);
+			}
+		}
+	}
+	@include bp(sp) {
+		input[type="radio"] + label {
+		padding: 0 5px 0 $checkbox-middle + 5px;
+		font-size: 14px;
+			&::before {
+			left: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@mixin bp($point) {
+  @if $point == sp {
+    @media screen and (max-width: $BREAKPOINT_SP - 1) {
+      @content;
+    }
+  } @else if $point == tb {
+    @media screen and (min-width: $BREAKPOINT_SP) {
+      @content;
+    }
+  } @else if $point == notb {
+    @media screen and (min-width: $BREAKPOINT_TB) {
+      @content;
+    }
+  } @else if $point == pc {
+    @media screen and (min-width: $BREAKPOINT_PC) {
+      @content;
+    }
+  }
+}

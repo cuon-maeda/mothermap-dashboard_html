@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<title>MOTHERMAP</title>
+
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="Description" content="" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700" rel="stylesheet">
+<script src="https://kit..com/01467f373e.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
+<link rel="stylesheet" type="text/css" href="common/css/style.css" media="all" />
+
+</head>
+
+<body>
+<div id="container">
+<div id="pageTop">
+<header><div id="header"><div class="cont">
+HEADER
+</div></div></header>
+<!-- /#header -->
+</div>
+<div id="pageBody">
+<div id="contents">
+
+<section class="cautionSCT"><div class="cont">
+<h2><i class="fas fa-exclamation-triangle"></i>確認が必要な工事</h2>
+<div class="list">
+<div class="block">
+<p class="heading"><a href="#">工事開始日が過ぎている工事が2件あります。</a></p>
+</div>
+<div class="block">
+<p class="heading"><a href="#">工事終了日が過ぎている工事が2件あります。</a></p>
+</div>
+</div>
+</div></section>
+
+<div class="column2">
+<div class="main">
+
+<section class="taskSCT"><div class="cont">
+<div class="head">
+<h2><i class="fas fa-tools"></i>施工状況</h2>
+<form class="sortbox">
+<label class="select">
+<select>
+<option>すべて</option>
+<option>マザーマップビル</option>
+</select>
+</label>
+<label class="date">
+<span>期間：</span><input type="date">
+</label>
+<label class="date">
+<span>～</span><input type="date">
+</label>
+<button><i class="fas fa-download"></i>表示</button>
+</form>
+</div>
+<div class="graph">
+<ul class="bar">
+<li class="preCon" data-name="施工前" style="flex:10">10</li>
+<li class="conStart" data-name="着工" style="flex:24">24</li>
+<li class="workRemain" data-name="残工事あり" style="flex:15">15</li>
+<li class="conComplete" data-name="完工" style="flex:10">10</li>
+</ul>
+<ul class="info">
+<li class="preCon"><a href="#" class="active">施工前<span>10</span></a></li>
+<li class="conStart"><a href="#">着工<span>24</span></a></li>
+<li class="workRemain"><a href="#">残工事あり<span>15</span></a></li>
+<li class="conComplete"><a href="#">完工<span>10</span></a></li>
+</ul>
+</div>
+<div class="table">
+<table class="tableSet1">
+<thead>
+<tr>
+<th>連絡状況</th>
+<th>工事状況</th>
+<th>物件名</th>
+<th>戸数</th>
+<th>工事開始日</th>
+<th>工事終了日</th>
+<th>担当営業</th>
+<th>施工業者</th>
+</tr>
+</thead>
+<tbody>
+<tr class="over">
+<td>
+<ul class="bar">
+<li class="notYet" data-name="未連絡" style="flex:10"></li>
+<li class="done" data-name="連絡済" style="flex:40"></li>
+</ul><p class="info">連絡済：10/50</p></td>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="施工前" style="flex:10"></li>
+<li class="error" data-name="リスケ" style="flex:5"></li>
+<li class="done" data-name="完工" style="flex:35"></li>
+</ul><p class="info">完工：10/50</p></td>
+<td>マザーマップビル</td>
+<td>50戸</td>
+<td><span class="over">2023/01/01</span></td>
+<td><span>2023/04/01</span></td>
+<td>真座地図夫</td>
+<td>久遠太郎</td>
+</tr>
+<tr class="over">
+<td>
+<ul class="bar">
+<li class="notYet" data-name="未連絡" style="flex:10"></li>
+<li class="done" data-name="連絡済" style="flex:15"></li>
+</ul><p class="info">連絡済：10/25</p></td>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="施工前" style="flex:10"></li>
+<li class="error" data-name="リスケ" style="flex:5"></li>
+<li class="done" data-name="完工" style="flex:10"></li>
+</ul><p class="info">完工：10/25</p></td>
+<td>マザーマップビル</td>
+<td>25戸</td>
+<td><span>2023/01/01</span></td>
+<td><span class="over">2023/04/01</span></td>
+<td>真座地図夫</td>
+<td>久遠太郎</td>
+</tr>
+<tr>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="未連絡" style="flex:10"></li>
+<li class="done" data-name="連絡済" style="flex:15"></li>
+</ul><p class="info">連絡済：10/25</p></td>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="施工前" style="flex:10"></li>
+<li class="error" data-name="リスケ" style="flex:5"></li>
+<li class="done" data-name="完工" style="flex:10"></li>
+</ul><p class="info">完工：10/25</p></td>
+<td>マザーマップビル</td>
+<td>25戸</td>
+<td><span>2023/01/01</span></td>
+<td><span>2023/04/01</span></td>
+<td>真座地図夫</td>
+<td>久遠太郎</td>
+</tr>
+<tr>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="未連絡" style="flex:10"></li>
+<li class="done" data-name="連絡済" style="flex:15"></li>
+</ul><p class="info">連絡済：10/25</p></td>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="施工前" style="flex:10"></li>
+<li class="error" data-name="リスケ" style="flex:5"></li>
+<li class="done" data-name="完工" style="flex:10"></li>
+</ul><p class="info">完工：10/25</p></td>
+<td>マザーマップビル</td>
+<td>25戸</td>
+<td><span>2023/01/01</span></td>
+<td><span>2023/04/01</span></td>
+<td>真座地図夫</td>
+<td>久遠太郎</td>
+</tr>
+<tr>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="未連絡" style="flex:10"></li>
+<li class="done" data-name="連絡済" style="flex:15"></li>
+</ul><p class="info">連絡済：10/25</p></td>
+<td>
+<ul class="bar">
+<li class="notYet" data-name="施工前" style="flex:10"></li>
+<li class="error" data-name="リスケ" style="flex:5"></li>
+<li class="done" data-name="完工" style="flex:10"></li>
+</ul><p class="info">完工：10/25</p></td>
+<td>マザーマップビル</td>
+<td>25戸</td>
+<td><span>2023/01/01</span></td>
+<td><span>2023/04/01</span></td>
+<td>真座地図夫</td>
+<td>久遠太郎</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></section>
+
+<section class="infoSCT"><div class="cont">
+<h2><i class="fas fa-info-circle"></i>お知らせ</h2>
+<div class="list">
+<div class="block new">
+<p class="date">2023/01/01</p>
+<p class="icon"><span class="alert">重要</span></p>
+<p class="heading"><a href="#">お知らせ文言が入ります。システムメンテナンスのお知らせ</a></p>
+</div>
+<div class="block new">
+<p class="date">2023/01/01</p>
+<p class="icon"><span class="add">機能追加</span></p>
+<p class="heading"><a href="#">お知らせ文言が入ります。システムメンテナンスのお知らせ</a></p>
+</div>
+<div class="block">
+<p class="date">2023/01/01</p>
+<p class="icon"><span class="info">お知らせ</span></p>
+<p class="heading"><a href="#">お知らせ文言が入ります。システムメンテナンスのお知らせ</a></p>
+</div>
+</div>
+<p class="more"><a href="＃">もっと見る</a></p>
+</div></section>
+
+</div>
+<div class="sub">
+
+<section class="balanceSCT"><div class="cont">
+<div class="head">
+<h2><i class="fas fa-chart-line"></i>データ分析</h2>
+<p> [ 2023年11月1日～9日のデータ ]</p>
+</div>
+<div class="list">
+<div class="block preCon">
+<h3>物件登録</h3>
+<p class="count"><span>100</span>件</p>
+<p class="month plus">+<span>5</span>%</p>
+<p class="year minus">-<span>10</span>%</p>
+</div>
+<div class="block conStart">
+<h3>着工開始</h3>
+<p class="count"><span>100</span>件</p>
+<p class="month plus">+<span>5</span>%</p>
+<p class="year minus">-<span>10</span>%</p>
+</div>
+<div class="block workRemain">
+<h3>残工発生</h3>
+<p class="count"><span>100</span>件</p>
+<p class="month plus">+<span>5</span>%</p>
+<p class="year minus">-<span>10</span>%</p>
+</div>
+<div class="block conComplete">
+<h3>完工</h3>
+<p class="count"><span>100</span>件</p>
+<p class="month plus">+<span>5</span>%</p>
+<p class="year minus">-<span>10</span>%</p>
+</div>
+</div>
+<p class="more"><a href="＃">もっと見る</a></p>
+</div></section>
+
+</div>
+</div>
+
+<section class="quickSCT">
+<div class="mask"></div>
+<div class="cont">
+<h2><i class="fas fa-info-circle"></i>最新のお知らせ</h2>
+<div class="list"></div>
+<p class="close"></p>
+</div></section>
+
+</div><!-- /CONTENTS -->
+</div>
+
+<div id="pageBottom">
+<footer><div id="footer"><div class="cont">
+FOOTER
+</div></div></footer>
+<!-- /FOOTER -->
+</div>
+</div>
+<script>
+function copyUnreadNotifications() {
+	const quickList = document.querySelector('.quickSCT .list');
+	const unreadBlocks = document.querySelectorAll('.infoSCT .block.new');
+	unreadBlocks.forEach(block => {
+		const clone = block.cloneNode(true);
+		quickList.appendChild(clone);
+	});
+}
+copyUnreadNotifications();
+
+const ms = 1000;
+function fadeOut(elm) {
+    elm.style.transition = `opacity ${ms}ms`;
+    elm.style.opacity = 0;
+    setTimeout(() => {
+        elm.style.display = "none";
+        document.body.classList.remove('no_scroll');
+    }, ms + 10);
+}
+const modal = document.querySelector(".quickSCT");
+document.querySelectorAll('.quickSCT .mask, .quickSCT .close').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        fadeOut(modal);
+    });
+});
+
+</script>
+</body>
+</html>

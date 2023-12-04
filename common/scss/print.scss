@@ -1,0 +1,13 @@
+body {
+background-color: #fff;
+}
+@media print {
+	body {
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact;
+	}
+	@page {
+	size: A4 landscape;
+	margin: 0 !important;
+	}
+}

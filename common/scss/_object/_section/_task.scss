@@ -1,0 +1,129 @@
+.taskSCT {
+margin-bottom: $space-section;
+	@include section-type1;
+	.graph {
+	margin-bottom: $space-block;
+		.bar {
+		display: flex;
+		margin-bottom: $space-block;
+		list-style: none;
+			li {
+			position: relative;
+			padding: $space-block 0;
+			font-weight: 700;
+			font-size: 16px;
+			text-align: center;
+				&::before {
+				content: attr(data-name);
+				transform: translateX(-50%);
+				display: none;
+				position: absolute;
+				bottom: 70%;
+				left: 50%;
+				background-color: var(--color-set1);
+				border-radius: $border-radius-inline;
+				padding: $space-inline;
+				pointer-events: none;
+				white-space: nowrap;
+				font-weight: 400;
+				font-size: 14px;
+				color: #fff;
+				text-align: center;
+				z-index: 1;
+				}
+				&::after {
+				content: "";
+				display: none;
+				position: absolute;
+				border-style: solid;
+				border-width: 5px 5px 0;
+				border-color: var(--color-set1) transparent transparent transparent;
+				bottom: 70%;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-bottom: -5px;
+				}
+				&:hover::before,
+				&:hover::after {
+				display: block;
+				}
+			}
+			.preCon {
+			background-color: var(--color-set3);
+			}
+			.conStart {
+			background-color: var(--color-set4);
+			}
+			.conComplete {
+			background-color: var(--color-set6);
+			}
+			.workRemain {
+			background-color: var(--color-set2);
+			}
+		}
+		.info {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		gap: $space-block;
+			li {
+			transition: opacity $transition-time-hover ease;
+			border-radius: $border-radius-block;
+			font-weight: 700;
+			font-size: 14px;
+			text-align: center;
+				span {
+				display: inline-block;
+				margin-left: $space-inline;
+				padding: $space-inline;
+				background-color: #fff;
+				border-radius: $border-radius-circle;
+				font-size: 12px;
+				text-align: center;
+				}
+				&:hover {
+				opacity: 0.7;
+				}
+			}
+			.preCon {
+			background-color: var(--color-set3);
+				a.active::after {
+				border-color: var(--color-set3) transparent transparent transparent;
+				}
+			}
+			.conStart {
+			background-color: var(--color-set4);
+				a.active::after {
+				border-color: var(--color-set4) transparent transparent transparent;
+				}
+			}
+			.conComplete {
+			background-color: var(--color-set6);
+				a.active::after {
+				border-color: var(--color-set6) transparent transparent transparent;
+				}
+			}
+			.workRemain {
+			background-color: var(--color-set2);
+				a.active::after {
+				border-color: var(--color-set2) transparent transparent transparent;
+				}
+			}
+			a {
+			display: block;
+			position: relative;
+			padding: $space-inline $space-inline $space-inline $space-block;
+				&.active::after {
+				content: "";
+				transform: translateX(-50%);
+				position: absolute;
+				border-style: solid;
+				border-width: 10px 10px 0;
+				border-color: var(--color-set1) transparent transparent transparent;
+				top: 100%;
+				left: 50%;
+				}
+			}
+		}
+	}
+}
